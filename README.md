@@ -21,3 +21,10 @@ Mensagens:
     - '&eValor atual: &c{novo}'
     - ''
 ```
+
+## Placeholders
+- ```%ybolsa_bolsa%``` - Mostra o valor atual da bolsa.
+
+## API
+### Gerir o valor da bolsa.
+```int valor = yBolsaAPI.ybolsa.getBolsaValor();```

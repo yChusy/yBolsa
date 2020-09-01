@@ -1,7 +1,7 @@
 # yBolsa
 
-# Config
-Bolsa:
+## Config
+```Bolsa:
    Min: 70
    Max: 150
    Delay: 30 #em segundos
@@ -19,3 +19,4 @@ Mensagens:
     - '&eValor antigo: &a{antigo}'
     - '&eValor atual: &c{novo}'
     - ''
+    ```

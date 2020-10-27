@@ -1,5 +1,5 @@
 name: yBolsa
-version: 1.0.0
+version: 1.0.2-STABLE
 author: yChusy
 main: com.ystoreplugins.ybolsa.Main
 depend: [PlaceholderAPI]

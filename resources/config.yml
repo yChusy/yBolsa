@@ -1,4 +1,5 @@
 Bolsa:
+   Ativar: true
    Min: 70
    Max: 150
    Delay: 30 #em segundos

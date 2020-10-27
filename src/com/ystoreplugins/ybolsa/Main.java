@@ -37,7 +37,8 @@ public class Main extends JavaPlugin {
 		config.setup(this);
 		yBolsaAPI.ybolsa = new yBolsaAPI();
 		new PlaceholderAPI(this).register();
-		new BolsaTask(this).runTaskTimerAsynchronously(this, 20, 20 * config.delay);
+		if (getConfig().getBoolean("Bolsa.Ativar"))
+			new BolsaTask(this).runTaskTimerAsynchronously(this, 20, 20 * config.delay);
 	}
 	
 	public static yBolsaAPI getAPI() {

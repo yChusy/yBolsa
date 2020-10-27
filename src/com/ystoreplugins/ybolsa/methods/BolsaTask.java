@@ -6,6 +6,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import com.ystoreplugins.ybolsa.Main;
+import com.ystoreplugins.ybolsa.events.BolsaUpdateEvent;
 
 public class BolsaTask extends BukkitRunnable {
 
@@ -22,6 +23,9 @@ public class BolsaTask extends BukkitRunnable {
 
 		int i = ThreadLocalRandom.current().nextInt(main.config.min, main.config.max);
 		valor = i;
+		
+		BolsaUpdateEvent updateEvent = new BolsaUpdateEvent(antigo, valor);
+		Bukkit.getScheduler().runTask(main, () -> main.getServer().getPluginManager().callEvent(updateEvent));
 
 		if (valor > antigo) {
 			Bukkit.getOnlinePlayers().forEach(p -> {
@@ -37,6 +41,7 @@ public class BolsaTask extends BukkitRunnable {
 				p.sendMessage(msg.replace("{antigo}", "" + antigo).replace("{novo}", "" + valor));
 			});
 		});
+		
 		return;
 	}
 }
